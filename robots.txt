@@ -3,10 +3,14 @@
 
 User-agent: *
 Allow: /
-
-# Bloquear rutas internas o privadas si las hubiera
 Disallow: /admin/
 Disallow: /private/
+Disallow: /config/
+Disallow: /scripts/
+Disallow: /styles.css
+Disallow: /script.js
+Disallow: /logo.png
+Disallow: /logo.jpg
 
 # Sitemap
 Sitemap: https://hielostenerife.es/sitemap.xml

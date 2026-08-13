@@ -85,6 +85,7 @@ button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
 .hero__ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:36px}
 .hero__chips{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
 .hero__chips li{background:#fff;border:1px solid var(--blue-100);color:var(--blue-700);padding:8px 14px;border-radius:999px;font-size:.88rem;font-weight:500;box-shadow:var(--shadow-sm)}
+@media (max-width:760px){.hero__chips{display:none}}
 
 .snowflakes{position:absolute;inset:0;pointer-events:none;overflow:hidden}
 .snowflakes span{position:absolute;color:#1e88e5;opacity:.18;font-size:24px;animation:fall linear infinite}
@@ -233,6 +234,14 @@ button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
 @media (max-width:760px){
   .header__cta{display:none}
   .hamburger{display:flex;margin-left:auto}
+  .footer{padding:40px 0 0}
+  .footer__inner{grid-template-columns:1fr 1fr;gap:30px 24px;text-align:left}
+  .footer__brand{grid-column:1/-1;text-align:center;display:flex;flex-direction:column;align-items:center}
+  .footer__brand p{margin-left:auto;margin-right:auto}
+  .footer__col h4{font-size:.95rem;margin-bottom:10px;text-align:center}
+  .footer__col a{padding:4px 0;font-size:.88rem;text-align:center}
+  .footer__bottom{padding:16px 0}
+  .footer__bottom .container{flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:6px}
   .nav{position:absolute;top:100%;left:0;right:0;background:#fff;flex-direction:column;gap:0;padding:8px 24px 20px;border-bottom:1px solid var(--line);box-shadow:var(--shadow-md);transform:translateY(-12px);opacity:0;pointer-events:none;transition:transform .2s ease,opacity .2s ease}
   .nav.is-open{transform:translateY(0);opacity:1;pointer-events:auto}
   .nav a{padding:14px 0;border-bottom:1px solid var(--line)}
@@ -243,8 +252,6 @@ button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
   .stats{grid-template-columns:1fr 1fr}
   .topbar__inner{font-size:.78rem;gap:8px}
   .van__brand{font-size:1.15rem}
-  .footer__inner{grid-template-columns:1fr}
-  .footer__bottom .container{justify-content:center;text-align:center}
   .faq__item summary{padding:16px 18px;font-size:.95rem}
 }
 
