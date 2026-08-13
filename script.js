@@ -132,7 +132,7 @@
       };
 
       const lines = [
-        'Hola, me gustaría hacer un pedido de hielo.',
+        'Hola, vengo desde la web hielostenerife.es y me gustaría hacer un pedido de hielo.',
         '',
         `*Nombre:* ${name}`,
         `*Teléfono:* ${phone}`,

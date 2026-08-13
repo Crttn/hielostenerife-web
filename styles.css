@@ -231,7 +231,7 @@ button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
 
 @media (max-width:760px){
   .header__cta{display:none}
-  .hamburger{display:flex}
+  .hamburger{display:flex;margin-left:auto}
   .nav{position:absolute;top:100%;left:0;right:0;background:#fff;flex-direction:column;gap:0;padding:8px 24px 20px;border-bottom:1px solid var(--line);box-shadow:var(--shadow-md);transform:translateY(-12px);opacity:0;pointer-events:none;transition:transform .2s ease,opacity .2s ease}
   .nav.is-open{transform:translateY(0);opacity:1;pointer-events:auto}
   .nav a{padding:14px 0;border-bottom:1px solid var(--line)}
