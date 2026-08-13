@@ -1,0 +1,12 @@
+# robots.txt — Hielos Tenerife SL
+# https://hielostenerifesl.es/robots.txt
+
+User-agent: *
+Allow: /
+
+# Bloquear rutas internas o privadas si las hubiera
+Disallow: /admin/
+Disallow: /private/
+
+# Sitemap
+Sitemap: https://hielostenerifesl.es/sitemap.xml
