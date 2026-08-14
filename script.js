@@ -45,7 +45,7 @@
     { threshold: 0.12 }
   );
   document
-    .querySelectorAll('.card, .srv, .section__head, .nosotros__copy, .nosotros__card, .contacto__info, .form, .faq__item')
+    .querySelectorAll('.card, .srv, .section__head, .contacto__info, .form, .faq__item')
     .forEach(el => {
       el.classList.add('reveal');
       io.observe(el);
@@ -93,6 +93,22 @@
 
     go(0);
   }
+
+  // Voltear tarjeta de producto
+  document.querySelectorAll('.product--flip').forEach(product => {
+    const button = product.querySelector('.product__actions--static .product__flip-btn');
+    const back = product.querySelector('.product__back');
+    const productName = product.querySelector('h3').textContent;
+    if (!button || !back) return;
+
+    button.addEventListener('click', () => {
+      const flipped = product.classList.toggle('is-flipped');
+      button.textContent = flipped ? 'Ver info' : 'Ver producto';
+      button.setAttribute('aria-label', flipped ? `Ver información de ${productName}` : `Ver imágenes de ${productName}`);
+      button.setAttribute('aria-expanded', flipped ? 'true' : 'false');
+      back.setAttribute('aria-hidden', flipped ? 'false' : 'true');
+    });
+  });
 
   // FAQ accordion — solo una abierta a la vez
   const faqItems = document.querySelectorAll('.faq__item');

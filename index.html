@@ -28,7 +28,6 @@
   <!-- Open Graph -->
   <meta property="og:type" content="business.business" />
   <meta property="og:locale" content="es_ES" />
-  <meta property="og:locale:alternate" content="es_ES" />
   <meta property="og:site_name" content="Hielos Tenerife SL" />
   <meta property="og:title" content="Hielos Tenerife SL | Reparto de Hielo en Tenerife" />
   <meta property="og:description" content="Reparto de hielo en cubitos y picado en toda la isla de Tenerife para bares, restaurantes, festivales y eventos. Tel: 600 30 30 84." />
@@ -146,7 +145,7 @@
       },
       {
         "@type": "Question",
-        "name": "¿Repartís hielo a domicilio en toda Tenerife?",
+        "name": "¿Repartís hielo a domicilio en todo Tenerife?",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Sí. Hacemos reparto a domicilio en toda la isla de Tenerife: zona norte, área metropolitana, sur y medianías. Cubrimos Santa Cruz, La Laguna, Puerto de la Cruz, Adeje, Arona y el resto de municipios."
@@ -202,15 +201,6 @@
   <!-- Skip-link for accessibility -->
   <a href="#main" class="skip-link">Saltar al contenido principal</a>
 
-  <!-- Top bar -->
-  <!--<div class="topbar">
-    <div class="container topbar__inner">
-      <span>📍 Toda la isla de Tenerife</span>
-      <span class="topbar__sep" aria-hidden="true">·</span>
-      <a href="tel:+34600303084" aria-label="Llamar al 600 30 30 84">📞 +34 600 30 30 84</a>
-    </div>
-  </div>-->
-
   <!-- Header / Nav -->
   <header class="header" id="header" role="banner">
     <div class="container header__inner">
@@ -253,8 +243,8 @@
         Reparto de hielo en <span class="accent">Tenerife</span>, cuando lo necesitas
       </h1>
       <p class="hero__lead">
-        <strong>Hielos Tenerife S.L.</strong> suministra hielo en cubitos (2 y 2,5 kg) y hielo picado
-        (2 kg) a <strong>comercios, bares, festivales y eventos</strong> en toda la isla.
+        <strong>Hielos Tenerife S.L.</strong> suministra hielo en cubitos y picado
+        a <strong>comercios, bares, festivales y eventos</strong> en toda la isla.
         Entrega rápida y calidad profesional.
       </p>
       <div class="hero__ctas">
@@ -289,70 +279,123 @@
 
       <div class="grid grid--3">
 
-        <article class="card product" itemscope itemtype="https://schema.org/Product">
-          <div class="product__icon" aria-hidden="true">
-            <svg viewBox="0 0 64 64" width="48" height="48" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round">
-              <circle cx="20" cy="20" r="4"/>
-              <circle cx="36" cy="18" r="3"/>
-              <circle cx="48" cy="28" r="4"/>
-              <circle cx="18" cy="36" r="3"/>
-              <circle cx="34" cy="38" r="5"/>
-              <circle cx="46" cy="46" r="3"/>
-              <circle cx="26" cy="50" r="4"/>
-            </svg>
+        <article class="card product product--flip product--featured" itemscope itemtype="https://schema.org/Product">
+          <div class="product__static">
+            <div class="product__badge">Más vendido</div>
+            <div class="product__heading">
+              <div class="product__icon" aria-hidden="true">
+                <svg viewBox="0 0 64 64" width="48" height="48" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round">
+                  <rect x="12" y="12" width="40" height="40" rx="6"/>
+                  <line x1="12" y1="32" x2="52" y2="32"/>
+                  <line x1="32" y1="12" x2="32" y2="52"/>
+                </svg>
+              </div>
+              <h3 itemprop="name">Cubitos 2 kg</h3>
+            </div>
+            <div class="product__content">
+              <div class="product__details product__front">
+                <p itemprop="description">Nuestro formato estrella. Perfecto para hostelería, restaurantes y uso doméstico intensivo. Cubitos uniformes que enfrían rápido sin aguado excesivo.</p>
+                <ul class="product__specs">
+                  <li><span>Formato</span><b>Pack de 5 bolsas</b></li>
+                  <li><span>Peso total</span><b>10 kg</b></li>
+                  <li><span>Tipo</span><b>Cubito macizo</b></li>
+                  <li><span>Uso</span><b>Bares, hogares, eventos</b></li>
+                </ul>
+                <meta itemprop="brand" content="Hielos Tenerife SL" />
+              </div>
+              <div class="product__details product__back" id="productGallery" aria-hidden="true">
+                <div class="product-gallery" aria-label="Galería de cubitos de hielo 2 kg">
+                  <div class="product-gallery__image">
+                    <img src="hielo2kg.png" alt="Bolsa de cubitos de hielo de 2 kg" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product__actions product__actions--static">
+              <a class="btn btn--primary" href="#contacto" aria-label="Pedir cubitos de hielo 2 kg">Pedir ahora</a>
+              <button class="btn btn--outline product__flip-btn" type="button" aria-expanded="false" aria-controls="productGallery" aria-label="Ver imágenes de cubitos de hielo 2 kg">Ver producto</button>
+            </div>
           </div>
-          <h3 itemprop="name">Picado 2 kg</h3>
-          <p itemprop="description">Hielo picado fino, listo para conservar pescado, marisco y producto fresco. También perfecto para cócteles y barras de festival.</p>
-          <ul class="product__specs">
-            <li><span>Formato</span><b>Bolsa 2 kg</b></li>
-            <li><span>Tipo</span><b>Picado</b></li>
-            <li><span>Uso</span><b>Pescaderías, coctelería, ferias</b></li>
-          </ul>
-          <meta itemprop="brand" content="Hielos Tenerife SL" />
-          <a class="btn btn--outline" href="#contacto" aria-label="Pedir hielo picado 2 kg">Pedir ahora</a>
         </article>
 
-        <article class="card product product--featured" itemscope itemtype="https://schema.org/Product">
-          <div class="product__badge">Más vendido</div>
-          <div class="product__icon" aria-hidden="true">
-            <svg viewBox="0 0 64 64" width="48" height="48" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round">
-              <rect x="12" y="12" width="40" height="40" rx="6"/>
-              <line x1="12" y1="32" x2="52" y2="32"/>
-              <line x1="32" y1="12" x2="32" y2="52"/>
-            </svg>
+        <article class="card product product--flip" itemscope itemtype="https://schema.org/Product">
+          <div class="product__static">
+            <div class="product__heading">
+              <div class="product__icon" aria-hidden="true">
+                <svg viewBox="0 0 64 64" width="48" height="48" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round">
+                  <circle cx="20" cy="20" r="4"/>
+                  <circle cx="36" cy="18" r="3"/>
+                  <circle cx="48" cy="28" r="4"/>
+                  <circle cx="18" cy="36" r="3"/>
+                  <circle cx="34" cy="38" r="5"/>
+                  <circle cx="46" cy="46" r="3"/>
+                  <circle cx="26" cy="50" r="4"/>
+                </svg>
+              </div>
+              <h3 itemprop="name">Picado 2 kg</h3>
+            </div>
+            <div class="product__content">
+              <div class="product__details product__front">
+                <p itemprop="description">Hielo picado fino, listo para conservar pescado, marisco y producto fresco. También perfecto para cócteles y barras de festival.</p>
+                <ul class="product__specs">
+                  <li><span>Formato</span><b>Pack de 5 bolsas</b></li>
+                  <li><span>Peso total</span><b>10 kg</b></li>
+                  <li><span>Tipo</span><b>Picado</b></li>
+                  <li><span>Uso</span><b>Pescaderías, coctelería, ferias</b></li>
+                </ul>
+                <meta itemprop="brand" content="Hielos Tenerife SL" />
+              </div>
+              <div class="product__details product__back" id="picadoGallery" aria-hidden="true">
+                <div class="product-gallery">
+                  <div class="product-gallery__image"><img src="" alt="Imagen de hielo picado 2 kg" /></div>
+                </div>
+              </div>
+            </div>
+            <div class="product__actions product__actions--static">
+              <a class="btn btn--outline" href="#contacto" aria-label="Pedir hielo picado 2 kg">Pedir ahora</a>
+              <button class="btn btn--outline product__flip-btn" type="button" aria-expanded="false" aria-controls="picadoGallery" aria-label="Ver imagen de hielo picado 2 kg">Ver producto</button>
+            </div>
           </div>
-          <h3 itemprop="name">Cubitos 2 kg</h3>
-          <p itemprop="description">Nuestro formato estrella. Perfecto para hostelería, restaurantes y uso doméstico intensivo. Cubitos uniformes que enfrían rápido sin aguado excesivo.</p>
-          <ul class="product__specs">
-            <li><span>Formato</span><b>Bolsa 2 kg</b></li>
-            <li><span>Tipo</span><b>Cubito macizo</b></li>
-            <li><span>Uso</span><b>Bares, hogares, eventos</b></li>
-          </ul>
-          <meta itemprop="brand" content="Hielos Tenerife SL" />
-          <a class="btn btn--primary" href="#contacto" aria-label="Pedir cubitos de hielo 2 kg">Pedir ahora</a>
         </article>
 
-        <article class="card product" itemscope itemtype="https://schema.org/Product">
-          <div class="product__icon" aria-hidden="true">
-            <svg viewBox="0 0 64 64" width="48" height="48" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round">
-              <rect x="10" y="10" width="44" height="44" rx="6"/>
-              <line x1="10" y1="32" x2="54" y2="32"/>
-              <line x1="32" y1="10" x2="32" y2="54"/>
-              <line x1="10" y1="21" x2="54" y2="21"/>
-              <line x1="10" y1="43" x2="54" y2="43"/>
-              <line x1="21" y1="10" x2="21" y2="54"/>
-              <line x1="43" y1="10" x2="43" y2="54"/>
-            </svg>
+        <article class="card product product--flip" itemscope itemtype="https://schema.org/Product">
+          <div class="product__static">
+            <div class="product__heading">
+              <div class="product__icon" aria-hidden="true">
+                <svg viewBox="0 0 64 64" width="48" height="48" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round">
+                  <rect x="10" y="10" width="44" height="44" rx="6"/>
+                  <line x1="10" y1="32" x2="54" y2="32"/>
+                  <line x1="32" y1="10" x2="32" y2="54"/>
+                  <line x1="10" y1="21" x2="54" y2="21"/>
+                  <line x1="10" y1="43" x2="54" y2="43"/>
+                  <line x1="21" y1="10" x2="21" y2="54"/>
+                  <line x1="43" y1="10" x2="43" y2="54"/>
+                </svg>
+              </div>
+              <h3 itemprop="name">Cubitos 2,5 kg</h3>
+            </div>
+            <div class="product__content">
+              <div class="product__details product__front">
+                <p itemprop="description">Más cantidad por bolsa, ideal para negocios con alta rotación: terrazas, restaurantes, hoteles y caterings que no se pueden quedar sin hielo.</p>
+                <ul class="product__specs">
+                  <li><span>Formato</span><b>Pack de 5 bolsas</b></li>
+                  <li><span>Peso total</span><b>12,5 kg</b></li>
+                  <li><span>Tipo</span><b>Cubito macizo</b></li>
+                  <li><span>Uso</span><b>Hostelería, hoteles, catering</b></li>
+                </ul>
+                <meta itemprop="brand" content="Hielos Tenerife SL" />
+              </div>
+              <div class="product__details product__back" id="cubitos25Gallery" aria-hidden="true">
+                <div class="product-gallery">
+                  <div class="product-gallery__image"><img src="hielo2kg.png" alt="Imagen de cubitos de hielo 2,5 kg" /></div>
+                </div>
+              </div>
+            </div>
+            <div class="product__actions product__actions--static">
+              <a class="btn btn--outline" href="#contacto" aria-label="Pedir cubitos de hielo 2,5 kg">Pedir ahora</a>
+              <button class="btn btn--outline product__flip-btn" type="button" aria-expanded="false" aria-controls="cubitos25Gallery" aria-label="Ver imagen de cubitos de hielo 2,5 kg">Ver producto</button>
+            </div>
           </div>
-          <h3 itemprop="name">Cubitos 2,5 kg</h3>
-          <p itemprop="description">Más cantidad por bolsa, ideal para negocios con alta rotación: terrazas, restaurantes, hoteles y caterings que no se pueden quedar sin hielo.</p>
-          <ul class="product__specs">
-            <li><span>Formato</span><b>Bolsa 2,5 kg</b></li>
-            <li><span>Tipo</span><b>Cubito macizo</b></li>
-            <li><span>Uso</span><b>Hostelería, hoteles, catering</b></li>
-          </ul>
-          <meta itemprop="brand" content="Hielos Tenerife SL" />
-          <a class="btn btn--outline" href="#contacto" aria-label="Pedir cubitos de hielo 2,5 kg">Pedir ahora</a>
         </article>
 
       </div>
@@ -400,7 +443,7 @@
     <div class="container">
       <div class="section__head">
         <p class="eyebrow">Nuestra flota</p>
-        <h2 id="flota-title">Reparto de hielo en acción por toda Tenerife</h2>
+        <h2 id="flota-title">Reparto de hielo en acción por todo Tenerife</h2>
         <p class="section__lead">
           Furgonetas frigoríficas equipadas para mantener la cadena de frío y llegar a tiempo a tu negocio o evento.
           Échales un vistazo y, si quieres ver más, te esperamos en nuestro Instagram.
@@ -449,7 +492,7 @@
         <p class="eyebrow">Preguntas frecuentes</p>
         <h2 id="faq-title">Resolvemos tus dudas sobre el reparto de hielo en Tenerife</h2>
         <p class="section__lead">
-          Si no encuentras lo que buscas, llámanos al <a href="tel:+34600303084"><strong>+34 600 30 30 84</strong></a> y te atendemos directamente.
+          Si no encuentras lo que buscas, llámanos al <a href="tel:+34600303084"><strong>+34 600 30 30 84</strong></a> o contáctanos por <strong> WhatsApp</strong> te atendemos directamente.
         </p>
       </div>
 
@@ -466,7 +509,7 @@
 
         <details class="faq__item">
           <summary>
-            <span>¿Repartís hielo a domicilio en toda Tenerife?</span>
+            <span>¿Repartís hielo a domicilio en todo Tenerife?</span>
             <span class="faq__icon" aria-hidden="true">+</span>
           </summary>
           <div class="faq__answer">
@@ -537,7 +580,7 @@
             <span class="contacto__icon" aria-hidden="true">✉️</span>
             <div>
               <b>Email</b>
-              <a href="mailto:info@hielostenerife.es">info@hielostenerife.es</a>
+              <a href="mailto:hielostenerifesl@gmail.com">hielostenerifesl@gmail.com</a>
             </div>
           </li>
           <li>
@@ -627,7 +670,7 @@
         <h4>Contacto</h4>
         <a href="tel:+34600303084">+34 600 30 30 84</a>
         <a href="https://wa.me/34600303084" target="_blank" rel="noopener">WhatsApp</a>
-        <a href="mailto:info@hielostenerife.es">hielostenerifesl@gmail.com</a>
+        <a href="mailto:hielostenerifesl@gmail.com">hielostenerifesl@gmail.com</a>
       </nav>
     </div>
 
