@@ -6,9 +6,6 @@ Allow: /
 Disallow: /admin/
 Disallow: /private/
 Disallow: /config/
-Disallow: /scripts/
-Disallow: /logo.png
-Disallow: /logo.jpg
 
 # Sitemap
 Sitemap: https://hielostenerife.es/sitemap.xml
