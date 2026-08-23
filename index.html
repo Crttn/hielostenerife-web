@@ -122,9 +122,9 @@
       "@type": "OfferCatalog",
       "name": "Catálogo de hielo",
       "itemListElement": [
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Hielo en cubitos 2 kg" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Hielo en cubitos 2,5 kg" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Hielo picado 2,5 kg" } }
+        { "@type": "Service", "name": "Hielo en cubitos 2 kg", "serviceType": "Reparto de hielo en cubitos" },
+        { "@type": "Service", "name": "Hielo en cubitos 2,5 kg", "serviceType": "Reparto de hielo en cubitos" },
+        { "@type": "Service", "name": "Hielo picado 2,5 kg", "serviceType": "Reparto de hielo picado" }
       ]
     }
   }
@@ -283,7 +283,7 @@
 
       <div class="grid grid--3">
 
-        <article class="card product product--flip product--featured" itemscope itemtype="https://schema.org/Service">
+        <article class="card product product--flip product--featured">
           <div class="product__static">
             <div class="product__badge">Más vendido</div>
             <div class="product__heading">
@@ -294,18 +294,17 @@
                   <line x1="32" y1="12" x2="32" y2="52"/>
                 </svg>
               </div>
-              <h3 itemprop="name">Cubitos 2 kg</h3>
+              <h3>Cubitos 2 kg</h3>
             </div>
             <div class="product__content">
               <div class="product__details product__front">
-                <p itemprop="description">Nuestro formato estrella. Perfecto para hostelería, restaurantes y uso doméstico intensivo. Cubitos uniformes que enfrían rápido sin aguado excesivo.</p>
+                <p>Nuestro formato estrella. Perfecto para hostelería, restaurantes y uso doméstico intensivo. Cubitos uniformes que enfrían rápido sin aguado excesivo.</p>
                 <ul class="product__specs">
                   <li><span>Formato</span><b>Pack de 5 bolsas</b></li>
                   <li><span>Peso total</span><b>10 kg</b></li>
                   <li><span>Tipo</span><b>Cubito macizo</b></li>
                   <li><span>Uso</span><b>Bares, hogares, eventos</b></li>
                 </ul>
-                <meta itemprop="brand" content="Hielos Tenerife SL" />
               </div>
               <div class="product__details product__back" id="productGallery" aria-hidden="true">
                 <div class="product-gallery" aria-label="Galería de cubitos de hielo 2 kg">
@@ -322,7 +321,7 @@
           </div>
         </article>
 
-        <article class="card product product--flip" itemscope itemtype="https://schema.org/Service">
+        <article class="card product product--flip">
           <div class="product__static">
             <div class="product__heading">
               <div class="product__icon" aria-hidden="true">
@@ -336,18 +335,17 @@
                   <circle cx="26" cy="50" r="4"/>
                 </svg>
               </div>
-              <h3 itemprop="name">Picado 2,5 kg</h3>
+              <h3>Picado 2,5 kg</h3>
             </div>
             <div class="product__content">
               <div class="product__details product__front">
-                <p itemprop="description">Hielo picado fino, listo para conservar pescado, marisco y producto fresco. También perfecto para cócteles y barras de festival.</p>
+                <p>Hielo picado fino, listo para conservar pescado, marisco y producto fresco. También perfecto para cócteles y barras de festival.</p>
                 <ul class="product__specs">
                   <li><span>Formato</span><b>Pack de 5 bolsas</b></li>
                   <li><span>Peso total</span><b>12,5 kg</b></li>
                   <li><span>Tipo</span><b>Picado</b></li>
                   <li><span>Uso</span><b>Pescaderías, coctelería, ferias</b></li>
                 </ul>
-                <meta itemprop="brand" content="Hielos Tenerife SL" />
               </div>
               <div class="product__details product__back" id="picadoGallery" aria-hidden="true">
                 <div class="product-gallery">
@@ -362,7 +360,7 @@
           </div>
         </article>
 
-        <article class="card product product--flip" itemscope itemtype="https://schema.org/Service">
+        <article class="card product product--flip">
           <div class="product__static">
             <div class="product__heading">
               <div class="product__icon" aria-hidden="true">
@@ -376,18 +374,17 @@
                   <line x1="43" y1="10" x2="43" y2="54"/>
                 </svg>
               </div>
-              <h3 itemprop="name">Cubitos 2,5 kg</h3>
+              <h3>Cubitos 2,5 kg</h3>
             </div>
             <div class="product__content">
               <div class="product__details product__front">
-                <p itemprop="description">Más cantidad por bolsa, ideal para negocios con alta rotación: terrazas, restaurantes, hoteles y caterings que no se pueden quedar sin hielo.</p>
+                <p>Más cantidad por bolsa, ideal para negocios con alta rotación: terrazas, restaurantes, hoteles y caterings que no se pueden quedar sin hielo.</p>
                 <ul class="product__specs">
                   <li><span>Formato</span><b>Pack de 5 bolsas</b></li>
                   <li><span>Peso total</span><b>12,5 kg</b></li>
                   <li><span>Tipo</span><b>Cubito macizo</b></li>
                   <li><span>Uso</span><b>Hostelería, hoteles, catering</b></li>
                 </ul>
-                <meta itemprop="brand" content="Hielos Tenerife SL" />
               </div>
               <div class="product__details product__back" id="cubitos25Gallery" aria-hidden="true">
                 <div class="product-gallery">
@@ -474,7 +471,7 @@
   </section>
 
   <!-- Flota -->
-  <section class="section" id="flota" aria-labelledby="flota-title">
+  <section class="section section--alt" id="flota" aria-labelledby="flota-title">
     <div class="container">
       <div class="section__head">
         <p class="eyebrow">Nuestra flota</p>
@@ -527,7 +524,7 @@
   </section>
 
   <!-- FAQ -->
-  <section class="section section--alt" id="faq" aria-labelledby="faq-title">
+  <section class="section" id="faq" aria-labelledby="faq-title">
     <div class="container">
       <div class="section__head">
         <p class="eyebrow">Preguntas frecuentes</p>
