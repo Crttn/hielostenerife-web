@@ -7,8 +7,6 @@ Disallow: /admin/
 Disallow: /private/
 Disallow: /config/
 Disallow: /scripts/
-Disallow: /styles.css
-Disallow: /script.js
 Disallow: /logo.png
 Disallow: /logo.jpg
 
