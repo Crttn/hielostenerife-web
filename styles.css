@@ -145,6 +145,17 @@ button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
 .srv h3{font-family:'Fraunces',serif;font-size:1.15rem;margin:0 0 6px;color:var(--ink)}
 .srv p{color:var(--ink-soft);font-size:.95rem;margin:0}
 
+/* ---------- Alquiler de congeladores ---------- */
+.section--rental{background:linear-gradient(180deg,#ffffff 0%,var(--bg-soft) 100%)}
+.rental-card{display:flex;flex-direction:column;gap:12px}
+.rental-card__icon{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;background:var(--blue-50);color:var(--blue-500)}
+.rental-card h3{font-family:'Fraunces',serif;font-size:1.2rem;margin:0;color:var(--ink)}
+.rental-card p{color:var(--ink-soft);font-size:.95rem;margin:0}
+.rental-combo{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px 32px;margin-top:36px;padding:28px 32px;border-radius:var(--radius-lg);background:linear-gradient(135deg,#0d47a1 0%,#1e88e5 100%);box-shadow:var(--shadow-md)}
+.rental-combo h3{font-family:'Fraunces',serif;font-size:1.35rem;margin:0 0 6px;color:#fff}
+.rental-combo p{margin:0;max-width:640px;color:#cfe1ff;font-size:.97rem}
+.rental-combo .btn{flex-shrink:0}
+
 /* ---------- Zonas de reparto ---------- */
 .zonas__list{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:10px;justify-content:center;max-width:920px;margin-inline:auto}
 .zonas__list li{background:#fff;border:1px solid var(--blue-100);color:var(--blue-700);padding:10px 18px;border-radius:999px;font-size:.95rem;font-weight:600;box-shadow:var(--shadow-sm)}
@@ -207,7 +218,27 @@ button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
 .form input,.form select,.form textarea{font:inherit;padding:12px 14px;border-radius:12px;border:1.5px solid var(--line);background:#fbfdff;color:var(--ink);transition:border-color .15s ease,box-shadow .15s ease;width:100%}
 .form input:focus,.form select:focus,.form textarea:focus{outline:none;border-color:var(--blue-500);box-shadow:0 0 0 4px rgba(30,136,229,.15);background:#fff}
 .form textarea{resize:vertical;min-height:80px}
-.form .btn{width:100%;margin-top:6px}
+.form__group{border:0;padding:0;margin:0;min-width:0}
+.form__group legend{padding:0;float:left;width:100%;font-size:.88rem;font-weight:600;color:var(--ink-soft)}
+.form__legend-note{font-weight:500;font-size:.8rem;color:var(--muted);margin-left:6px}
+.dropdown{position:relative;clear:both;padding-top:6px}
+.dropdown__toggle{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 14px;border:1.5px solid var(--line);border-radius:12px;background:#fbfdff;color:var(--ink);font-size:.95rem;cursor:pointer;transition:border-color .15s ease,box-shadow .15s ease,background .15s ease}
+.dropdown__toggle::-webkit-details-marker{display:none}
+.dropdown__toggle:hover{border-color:var(--blue-200);background:#fff}
+.dropdown[open] .dropdown__toggle{border-color:var(--blue-500);background:#fff;box-shadow:0 0 0 4px rgba(30,136,229,.15)}
+.dropdown__value{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.dropdown__value.is-placeholder{color:var(--muted)}
+.dropdown__caret{display:grid;flex-shrink:0;color:var(--blue-500);transition:transform .2s ease}
+.dropdown[open] .dropdown__caret{transform:rotate(180deg)}
+.dropdown__panel{position:absolute;top:calc(100% + 8px);left:0;right:0;z-index:20;display:grid;gap:6px;padding:10px;background:#fff;border:1px solid var(--blue-100);border-radius:14px;box-shadow:var(--shadow-md);max-height:320px;overflow-y:auto}
+.form .form__check{position:relative;display:flex;align-items:center;padding:9px 12px;border-radius:10px;background:transparent;cursor:pointer;font-size:.92rem;font-weight:500;color:var(--ink);transition:background .15s ease}
+.form .form__check:hover{background:var(--blue-50)}
+.form .form__check input{position:absolute;width:1px;height:1px;padding:0;margin:0;border:0;opacity:0;pointer-events:none}
+.form .form__check span{display:flex;align-items:center;gap:10px}
+.form .form__check span::before{content:"";width:20px;height:20px;flex-shrink:0;border:1.5px solid var(--blue-200);border-radius:6px;background-color:#fff;display:grid;place-items:center;font-size:.7rem;font-weight:700;color:#fff;line-height:1;transition:background .15s ease,border-color .15s ease}
+.form .form__check input:checked+span::before{content:"✓";background-color:var(--blue-500);border-color:var(--blue-500)}
+.form .form__check input:checked+span{color:var(--blue-700);font-weight:600}
+.form .form__check input:focus-visible+span::before{border-color:var(--blue-500);box-shadow:0 0 0 4px rgba(30,136,229,.15)}
 .form__status{margin:0;font-size:.9rem;font-weight:600;color:var(--blue-600);min-height:1.2em}
 .form__status.is-error{color:#c62828}
 .form__hint{font-size:.78rem;color:var(--muted);margin:0;text-align:center}
@@ -255,6 +286,8 @@ button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
   .product--flip{height:540px}
   .product--flip .product__static{padding:26px}
   .section{padding:70px 0}
+  .rental-combo{padding:24px 22px;gap:20px}
+  .rental-combo .btn{width:100%}
   .hero{padding:60px 0 80px}
   .stats{grid-template-columns:1fr 1fr}
   .faq__item summary{padding:16px 18px;font-size:.95rem}

@@ -45,7 +45,7 @@
     { threshold: 0.12 }
   );
   document
-    .querySelectorAll('.card, .srv, .section__head, .contacto__info, .form, .faq__item')
+    .querySelectorAll('.card, .srv, .section__head, .contacto__info, .form, .faq__item, .rental-combo')
     .forEach(el => {
       el.classList.add('reveal');
       io.observe(el);
@@ -122,6 +122,40 @@
     });
   });
 
+  // Selector múltiple de servicios (desplegable)
+  const productDropdown = document.getElementById('productDropdown');
+  if (productDropdown) {
+    const productSummary = document.getElementById('productSummary');
+    const boxes = Array.from(productDropdown.querySelectorAll('input[type="checkbox"]'));
+
+    const updateSummary = () => {
+      const checked = boxes.filter(b => b.checked);
+      if (!checked.length) {
+        productSummary.textContent = 'Selecciona…';
+      } else if (checked.length <= 2) {
+        productSummary.textContent = checked.map(b => b.nextElementSibling.textContent.trim()).join(', ');
+      } else {
+        productSummary.textContent = `${checked.length} servicios seleccionados`;
+      }
+      productSummary.classList.toggle('is-placeholder', !checked.length);
+    };
+
+    boxes.forEach(b => b.addEventListener('change', updateSummary));
+
+    // Cerrar al pulsar fuera o con Escape
+    document.addEventListener('click', e => {
+      if (productDropdown.open && !productDropdown.contains(e.target)) productDropdown.open = false;
+    });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && productDropdown.open) productDropdown.open = false;
+    });
+
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) contactForm.addEventListener('reset', () => setTimeout(updateSummary, 0));
+
+    updateSummary();
+  }
+
   // Form -> WhatsApp
   const form = document.getElementById('contactForm');
   const status = document.getElementById('formStatus');
@@ -131,11 +165,11 @@
       const data = new FormData(form);
       const name = (data.get('name') || '').toString().trim();
       const phone = (data.get('phone') || '').toString().trim();
-      const product = (data.get('product') || '').toString();
+      const products = data.getAll('product').map(v => v.toString());
       const message = (data.get('message') || '').toString().trim();
 
-      if (!name || !phone || !product) {
-        status.textContent = 'Por favor, rellena nombre, teléfono y tipo de hielo.';
+      if (!name || !phone || !products.length) {
+        status.textContent = 'Por favor, rellena nombre, teléfono y marca al menos un servicio.';
         status.classList.add('is-error');
         return;
       }
@@ -143,16 +177,17 @@
       const productLabels = {
         'cubitos-2': 'Cubitos 2 kg',
         'cubitos-25': 'Cubitos 2,5 kg',
-        'picado': 'Hielo picado 2 kg',
-        'mixto': 'Mixto / no estoy seguro'
+        'picado': 'Hielo picado 2,5 kg',
+        'alquiler-congelador': 'Alquiler de congelador',
+        'mixto': 'No estoy seguro'
       };
 
       const lines = [
-        'Hola, vengo desde la web hielostenerife.es y me gustaría hacer un pedido de hielo.',
+        'Hola, vengo desde la web hielostenerife.es y me gustaría hacer una solicitud.',
         '',
         `*Nombre:* ${name}`,
         `*Teléfono:* ${phone}`,
-        `*Producto:* ${productLabels[product] || product}`,
+        `*Servicios:* ${products.map(p => productLabels[p] || p).join(', ')}`,
         message ? `*Mensaje:* ${message}` : null
       ].filter(Boolean);
 

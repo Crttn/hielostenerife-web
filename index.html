@@ -86,7 +86,7 @@
     "@id": "https://hielostenerife.es/#business",
     "name": "Hielos Tenerife SL",
     "alternateName": "Hielos Tenerife",
-    "description": "Empresa de reparto de hielo en cubitos (2 y 2,5 kg) y hielo picado (2 kg) para comercios, bares, festivales y eventos en zona metropolitana de Tenerife.",
+    "description": "Empresa de reparto de hielo en cubitos (2 y 2,5 kg) y hielo picado (2 kg) para comercios, bares, festivales y eventos en zona metropolitana de Tenerife. También ofrecemos alquiler de congeladores con instalación y retirada incluidas.",
     "url": "https://hielostenerife.es/",
     "telephone": "+34600303084",
     "priceRange": "€€",
@@ -133,7 +133,8 @@
       "itemListElement": [
         { "@type": "Service", "name": "Hielo en cubitos 2 kg", "serviceType": "Reparto de hielo en cubitos" },
         { "@type": "Service", "name": "Hielo en cubitos 2,5 kg", "serviceType": "Reparto de hielo en cubitos" },
-        { "@type": "Service", "name": "Hielo picado 2,5 kg", "serviceType": "Reparto de hielo picado" }
+        { "@type": "Service", "name": "Hielo picado 2,5 kg", "serviceType": "Reparto de hielo picado" },
+        { "@type": "Service", "name": "Alquiler de congeladores", "serviceType": "Alquiler de congeladores con instalación y retirada incluidas" }
       ]
     }
   }
@@ -181,6 +182,14 @@
       },
       {
         "@type": "Question",
+        "name": "¿Alquiláis congeladores para guardar el hielo?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí. Ofrecemos alquiler de congeladores con la instalación y la retirada incluidas en el precio. Te llevamos el equipo a tu local o evento, lo dejamos funcionando y pasamos a recogerlo cuando termines. Puedes alquilarlo por días, meses o temporada completa."
+        }
+      },
+      {
+        "@type": "Question",
         "name": "¿Cómo puedo hacer un pedido?",
         "acceptedAnswer": {
           "@type": "Answer",
@@ -201,10 +210,11 @@
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://hielostenerife.es/" },
       { "@type": "ListItem", "position": 2, "name": "Productos", "item": "https://hielostenerife.es/#productos" },
-      { "@type": "ListItem", "position": 3, "name": "Servicios", "item": "https://hielostenerife.es/#servicios" },
-      { "@type": "ListItem", "position": 4, "name": "Zonas de reparto", "item": "https://hielostenerife.es/#zonas" },
-      { "@type": "ListItem", "position": 5, "name": "Nuestra flota", "item": "https://hielostenerife.es/#flota" },
-      { "@type": "ListItem", "position": 6, "name": "Contacto", "item": "https://hielostenerife.es/#contacto" }
+      { "@type": "ListItem", "position": 3, "name": "Alquiler de congeladores", "item": "https://hielostenerife.es/#alquiler" },
+      { "@type": "ListItem", "position": 4, "name": "Servicios", "item": "https://hielostenerife.es/#servicios" },
+      { "@type": "ListItem", "position": 5, "name": "Zonas de reparto", "item": "https://hielostenerife.es/#zonas" },
+      { "@type": "ListItem", "position": 6, "name": "Nuestra flota", "item": "https://hielostenerife.es/#flota" },
+      { "@type": "ListItem", "position": 7, "name": "Contacto", "item": "https://hielostenerife.es/#contacto" }
     ]
   }
   </script>
@@ -230,6 +240,7 @@
 
       <nav class="nav" id="nav" aria-label="Navegación principal">
         <a href="#productos">Productos</a>
+        <a href="#alquiler">Alquiler</a>
         <a href="#servicios">Servicios</a>
         <a href="#zonas">Zonas</a>
         <a href="#flota">Nuestra flota</a>
@@ -237,8 +248,8 @@
         <a href="#contacto">Contacto</a>
       </nav>
 
-      <a class="btn btn--primary header__cta" href="tel:+34600303084" aria-label="Llamar a Hielos Tenerife">
-        Llámanos ya
+      <a class="btn btn--primary header__cta" href="#contacto" aria-label="Ir a la sección de contacto">
+        Contáctanos
       </a>
 
       <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
@@ -266,12 +277,6 @@
           <a class="btn btn--primary btn--lg" href="#contacto">Contáctanos</a>
           <a class="btn btn--ghost btn--lg" href="#productos">Ver productos</a>
         </div>
-
-        <ul class="hero__chips">
-          <li>✔ Hielo picado 2,5 kg</li>
-          <li>✔ Cubitos 2 kg y 2,5 kg</li>
-          <!--<li>✔ Zona Metropolitana</li>-->
-        </ul>
       </div>
 
       <div class="snowflakes" aria-hidden="true">
@@ -426,6 +431,76 @@
       </div>
     </section>
 
+    <!-- Alquiler de congeladores -->
+    <section class="section section--rental" id="alquiler" aria-labelledby="alquiler-title">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow">Servicio complementario</p>
+          <h2 id="alquiler-title">Alquiler de congeladores</h2>
+          <p class="section__lead">
+            ¿No tienes dónde guardar el hielo? Te llevamos el congelador, lo instalamos y lo retiramos cuando
+            termines. Instalación y retirada incluidas.
+          </p>
+        </div>
+
+        <div class="grid grid--3">
+
+          <article class="card rental-card">
+            <div class="rental-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="1" y="6" width="14" height="11" rx="2" />
+                <path d="M15 9h4l4 4v4h-8z" />
+                <circle cx="7" cy="19" r="2" />
+                <circle cx="18" cy="19" r="2" />
+              </svg>
+            </div>
+            <h3>Instalación incluida</h3>
+            <p>Llevamos el congelador hasta tu local o evento y lo dejamos colocado, conectado y listo para usar.
+              Sin coste de transporte ni de montaje.</p>
+          </article>
+
+          <article class="card rental-card">
+            <div class="rental-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 14 4 14 4 9" />
+                <path d="M20 20a9 9 0 0 0-15.5-6.2L4 14" />
+              </svg>
+            </div>
+            <h3>Retirada al terminar</h3>
+            <p>Cuando acaba la temporada o el evento nos avisas y pasamos a recogerlo. No tienes que mover ni
+              almacenar nada.</p>
+          </article>
+
+          <article class="card rental-card">
+            <div class="rental-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="5" width="18" height="16" rx="2" />
+                <line x1="3" y1="10" x2="21" y2="10" />
+                <line x1="8" y1="3" x2="8" y2="7" />
+                <line x1="16" y1="3" x2="16" y2="7" />
+              </svg>
+            </div>
+            <h3>Alquiler flexible</h3>
+            <p>Por días sueltos, por meses o por temporada completa, con congeladores de distintas capacidades
+              según el hielo que muevas.</p>
+          </article>
+
+        </div>
+
+        <div class="rental-combo">
+          <div class="rental-combo__text">
+            <h3>Congelador + reparto de hielo</h3>
+            <p>Te dejamos el congelador instalado y pasamos a reponerlo con la frecuencia que necesites. Un solo
+              proveedor y el stock siempre lleno, sin que tengas que estar pendiente.</p>
+          </div>
+          <a class="btn btn--outline btn--lg" href="#contacto">Solicitar presupuesto</a>
+        </div>
+      </div>
+    </section>
+
     <!-- Servicios -->
     <section class="section section--alt" id="servicios" aria-labelledby="servicios-title">
       <div class="container">
@@ -469,8 +544,8 @@
           <p class="eyebrow">Zonas de reparto</p>
           <h2 id="zonas-title">Reparto de hielo en toda la zona metropolitana de Tenerife</h2>
           <p class="section__lead">
-            Repartimos hielo en cubitos y picado en Santa Cruz de Tenerife, La Laguna y los municipios
-            del norte y sur de la isla. Estas son las zonas donde llegamos:
+            Repartimos en Santa Cruz de Tenerife, La Laguna y los municipios
+            del norte y meidanias de la isla. Estas son nuestras principales zonas de reparto:
           </p>
         </div>
 
@@ -621,6 +696,18 @@
 
           <details class="faq__item">
             <summary>
+              <h3>¿Alquiláis congeladores para guardar el hielo?</h3>
+              <span class="faq__icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq__answer">
+              <p>Sí. Ofrecemos alquiler de congeladores con la instalación y la retirada incluidas en el
+                precio. Te llevamos el equipo a tu local o evento, lo dejamos funcionando y pasamos a recogerlo cuando
+                termines. Puedes alquilarlo por días, meses o temporada completa.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>
               <h3>¿Cómo puedo hacer un pedido?</h3>
               <span class="faq__icon" aria-hidden="true">+</span>
             </summary>
@@ -694,16 +781,42 @@
             <input type="tel" name="phone" required placeholder="600 000 000" autocomplete="tel" />
           </label>
 
-          <label>
-            <span>Tipo de hielo</span>
-            <select name="product" required>
-              <option value="">Selecciona…</option>
-              <option value="cubitos-2">Cubitos 2 kg</option>
-              <option value="cubitos-25">Cubitos 2,5 kg</option>
-              <option value="picado">Hielo picado 2,5 kg</option>
-              <option value="mixto">Mixto / no estoy seguro</option>
-            </select>
-          </label>
+          <fieldset class="form__group">
+            <legend>¿Qué necesitas? <span class="form__legend-note">Puedes marcar varios</span></legend>
+            <details class="dropdown" id="productDropdown">
+              <summary class="dropdown__toggle">
+                <span class="dropdown__value is-placeholder" id="productSummary">Selecciona…</span>
+                <span class="dropdown__caret" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                </span>
+              </summary>
+              <div class="dropdown__panel">
+                <label class="form__check">
+                  <input type="checkbox" name="product" value="cubitos-2" />
+                  <span>Cubitos 2 kg</span>
+                </label>
+                <label class="form__check">
+                  <input type="checkbox" name="product" value="cubitos-25" />
+                  <span>Cubitos 2,5 kg</span>
+                </label>
+                <label class="form__check">
+                  <input type="checkbox" name="product" value="picado" />
+                  <span>Hielo picado 2,5 kg</span>
+                </label>
+                <label class="form__check">
+                  <input type="checkbox" name="product" value="alquiler-congelador" />
+                  <span>Alquiler de congelador</span>
+                </label>
+                <label class="form__check">
+                  <input type="checkbox" name="product" value="mixto" />
+                  <span>No estoy seguro</span>
+                </label>
+              </div>
+            </details>
+          </fieldset>
 
           <label>
             <span>Mensaje</span>
@@ -746,6 +859,7 @@
 
       <nav class="footer__col" aria-label="Empresa">
         <h4>Empresa</h4>
+        <a href="#alquiler">Alquiler de congeladores</a>
         <a href="#servicios">Servicios</a>
         <a href="#zonas">Zonas de reparto</a>
         <a href="#faq">Preguntas frecuentes</a>
